@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AddProductFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/productNameInputET"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:hint="Product Name" />
+
+            <EditText
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/productSellPriceInputET"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:inputType="number"
+                android:hint="Product Sell Price" />
+
+            <EditText
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/productPurchasePriceInputET"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:inputType="number"
+                android:hint="Product Purchase Price" />
+
+            <EditText
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/productDescriptionInputET"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:hint="Product Description"
+                android:maxLines="10" />
+
+            <EditText
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/productQuantityInputET"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:inputType="number"
+                android:hint="Product Quantity" />
+
+            <Spinner
+                android:layout_marginTop="6dp"
+                android:id="@+id/categorySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="46dp" />
+
+            <Button
+
+                android:id="@+id/dateBtn"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Select Date"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_marginTop="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Image"
+                android:layout_gravity="center_horizontal"
+                style="@style/TextAppearance.AppCompat.Headline" />
+
+            <ImageView
+                android:layout_marginTop="6dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/productImageView"
+                android:src="@drawable/ic_baseline_person_24"/>
+
+            <LinearLayout
+                android:layout_marginTop="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cameraBtn"
+                    android:src="@drawable/ic_baseline_photo_camera_24" />
+                <ImageButton
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/galleryBtn"
+                    android:src="@drawable/ic_baseline_image_search_24" />
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/saveBtn"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="SAVE"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.myecomapplication.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.myecomapplication.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_addProductFragment"
+            app:destination="@id/addProductFragment"
+            app:popUpTo="@id/addProductFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_viewProductFragment"
+            app:destination="@id/viewProductFragment"
+            app:popUpTo="@id/viewProductFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/addProductFragment"
+        android:name="com.example.myecomapplication.AddProductFragment"
+        android:label="New Product"
+        tools:layout="@layout/fragment_add_product" />
+    <fragment
+        android:id="@+id/viewProductFragment"
+        android:name="com.example.myecomapplication.ViewProductFragment"
+        android:label="fragment_view_product"
+        tools:layout="@layout/fragment_view_product" >
+        <action
+            android:id="@+id/action_viewProductFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewOrdersFragment"
+        android:name="com.example.myecomapplication.ViewOrdersFragment"
+        android:label="fragment_view_orders"
+        tools:layout="@layout/fragment_view_orders" />
+    <fragment
+        android:id="@+id/reportProductFragment"
+        android:name="com.example.myecomapplication.ReportProductFragment"
+        android:label="fragment_report_product"
+        tools:layout="@layout/fragment_report_product" />
+    <fragment
+        android:id="@+id/manageUserFragment"
+        android:name="com.example.myecomapplication.ManageUserFragment"
+        android:label="fragment_manage_user"
+        tools:layout="@layout/fragment_manage_user" />
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.example.myecomapplication.ProductDetailsFragment"
+        android:label="fragment_product_details"
+        tools:layout="@layout/fragment_product_details" />
+</navigation>
